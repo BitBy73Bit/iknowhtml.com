@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: 'I Know H.T.M.L'
+primary: true
+siteGroup: 67bf5823-d7ee-4e54-bf55-7fc4f9d3de30 # I Know H.T.M.L
+sortOrder: 1

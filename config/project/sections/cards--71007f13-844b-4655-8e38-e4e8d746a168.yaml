@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: f69f3858-35a2-4f2d-9b0b-cf05d49ae26d # Card
+handle: cards
+maxAuthors: 1
+name: Cards
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  b557aefa-5deb-4a32-8a7b-3283b87e49ef: # I Know H.T.M.L
+    enabledByDefault: true
+    hasUrls: true
+    template: cards/_entry.twig
+    uriFormat: 'c/{slug}'
+type: channel

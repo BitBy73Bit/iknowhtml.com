@@ -1,0 +1,109 @@
+color: null
+description: null
+fieldLayouts:
+  e4501095-b4b3-4d6a-a259-1067ac920825:
+    cardThumbAlignment: end
+    cardView:
+      - dateCreated
+      - dateUpdated
+      - link
+      - slug
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-07-21T16:14:52+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d3b496ef-7d2d-49b6-b5ab-4666efb167ee
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-21T16:18:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 37f07c62-371d-489f-84be-d2566168b572 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5109b7b-0629-4f8e-9f33-aae97f8a6132
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-21T16:18:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 1180ca24-3298-4cf1-b341-f355e8805a5d # Background colour
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 75467444-0485-4505-b9f6-98abaa0883e8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-21T16:18:10+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 021872fb-5e2c-4c7d-a616-afc7d970e1aa # Text colour
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e0ff20f-185e-426d-96ee-e4bee764626a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2bd78a5a-f3ec-493b-9117-03238d2d6e7f
+        userCondition: null
+handle: card
+hasTitleField: true
+icon: null
+name: Card
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
