@@ -42,7 +42,7 @@ fieldLayouts:
         userCondition: null
 fs: uploads
 handle: cards
-name: cards
+name: Cards
 sortOrder: 1
 subpath: cards
 titleTranslationKeyFormat: null

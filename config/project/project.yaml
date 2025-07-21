@@ -1,4 +1,4 @@
-dateModified: 1753115174
+dateModified: 1753116562
 email:
   fromEmail: mike@bitbytebit.co.uk
   fromName: 'I Know H.T.M.L'
@@ -16,10 +16,11 @@ meta:
     37f07c62-371d-489f-84be-d2566168b572: Image # Image
     67bf5823-d7ee-4e54-bf55-7fc4f9d3de30: 'I Know H.T.M.L' # I Know H.T.M.L
     1180ca24-3298-4cf1-b341-f355e8805a5d: 'Background colour' # Background colour
-    6559cda3-32a6-484e-8d7a-05bc34a11a4d: cards # cards
+    6559cda3-32a6-484e-8d7a-05bc34a11a4d: Cards # Cards
     021872fb-5e2c-4c7d-a616-afc7d970e1aa: 'Text colour' # Text colour
     71007f13-844b-4655-8e38-e4e8d746a168: Cards # Cards
     b557aefa-5deb-4a32-8a7b-3283b87e49ef: 'I Know H.T.M.L' # I Know H.T.M.L
+    d20193d0-40d4-400c-bce2-93f5b8d757d0: Content # Content
     f69f3858-35a2-4f2d-9b0b-cf05d49ae26d: Card # Card
 system:
   edition: solo

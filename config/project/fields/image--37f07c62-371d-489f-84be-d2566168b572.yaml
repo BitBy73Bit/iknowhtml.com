@@ -11,7 +11,7 @@ settings:
     - image
   branchLimit: null
   defaultPlacement: end
-  defaultUploadLocationSource: 'volume:6559cda3-32a6-484e-8d7a-05bc34a11a4d' # cards
+  defaultUploadLocationSource: 'volume:6559cda3-32a6-484e-8d7a-05bc34a11a4d' # Cards
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: 1
@@ -20,7 +20,7 @@ settings:
   restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:6559cda3-32a6-484e-8d7a-05bc34a11a4d' # cards
+  restrictedLocationSource: 'volume:6559cda3-32a6-484e-8d7a-05bc34a11a4d' # Cards
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
