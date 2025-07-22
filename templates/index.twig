@@ -2,12 +2,5 @@
 
 {# Grab a random card item to display on the homepage #}
 {% set entry = craft.entries().section('submissions').orderBy('RAND()').one() %}
-{% set textColour = entry.textColour %}
 
-{% extends '_layout' %}
-
-{% block body %}
-
-    {% include 'submissions/_item' with {'refresh':true} %}
-
-{% endblock %}
+{% redirect entry.url %}
