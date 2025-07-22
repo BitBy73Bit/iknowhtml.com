@@ -1,12 +1,12 @@
 columnSuffix: null
-handle: content
-instructions: 'Give me some wordplay!...'
-name: Content
+handle: contributorUrl
+instructions: 'URL to contributors online presence'
+name: 'Contributor link'
 searchable: false
 settings:
   byteLimit: null
   charLimit: null
-  code: false
+  code: true
   initialRows: 4
   multiline: false
   placeholder: null

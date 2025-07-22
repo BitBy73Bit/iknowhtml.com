@@ -1,0 +1,28 @@
+{% set title = "Leaderboard - I know H.T.M.L" %}
+{% set textColour = "#000000" %}
+
+{% set submissions = craft.entries.section('submissions') %}
+{% do craft.upvote.sort(submissions) %}
+
+{% extends '_layout' %}
+
+{% block body %}
+
+    <article class="pt-20 px-4 w-full md:w-3/4 lg:w-2/3">
+
+        <h1 class="text-3xl font-bold mb-4">Leaderboard</h1>
+
+        <ol>
+        {% for item in submissions %}
+            <li class="pb-2">
+                #{{loop.index}} 
+                <a href="{{ item.url }}" class="hover:border-b">{{ item.title }}</a>
+                &#123;{{ craft.upvote.tally(item.id) }}&#125;
+            </li>
+        {% endfor %}
+        </ol>
+        
+
+    </article>
+
+{% endblock %}

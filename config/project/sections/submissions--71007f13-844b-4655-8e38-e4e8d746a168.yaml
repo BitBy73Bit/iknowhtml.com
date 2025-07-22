@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: f69f3858-35a2-4f2d-9b0b-cf05d49ae26d # Card
-handle: cards
+    uid: f69f3858-35a2-4f2d-9b0b-cf05d49ae26d # Submissions
+handle: submissions
 maxAuthors: 1
-name: Cards
+name: Submissions
 previewTargets:
   -
     __assoc__:
@@ -23,6 +23,6 @@ siteSettings:
   b557aefa-5deb-4a32-8a7b-3283b87e49ef: # I Know H.T.M.L
     enabledByDefault: true
     hasUrls: true
-    template: cards/_entry.twig
-    uriFormat: 'c/{slug}'
+    template: submissions/_entry.twig
+    uriFormat: 's/{slug}'
 type: channel

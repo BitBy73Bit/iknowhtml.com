@@ -1,12 +1,12 @@
 columnSuffix: null
-handle: content
-instructions: 'Give me some wordplay!...'
-name: Content
+handle: contributorEmail
+instructions: 'Email address of the contributor'
+name: 'Contributor email'
 searchable: false
 settings:
   byteLimit: null
   charLimit: null
-  code: false
+  code: true
   initialRows: 4
   multiline: false
   placeholder: null

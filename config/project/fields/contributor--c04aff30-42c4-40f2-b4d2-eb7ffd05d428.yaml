@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: content
-instructions: 'Give me some wordplay!...'
-name: Content
+handle: contributor
+instructions: 'Who contributed this submission?'
+name: Contributor
 searchable: false
 settings:
   byteLimit: null
