@@ -1,8 +1,8 @@
-<div class="@container h-dvh pt-10 px-4" style="background-color: {{ entry.backgroundColour }}; color: {{ entry.textColour }}">
+<div class="@container h-dvh pt-10 px-4">
 
-    <article class="flex gap-10 items-center justify-between h-full">
+    <article class="flex flex-col md:flex-row gap-10 items-start md:items-center justify-center md:justify-between h-full">
 
-        <div class="">
+        <div class="md:order-first w-full">
 
             <h1 class="font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl">I know H.T.M.L</h1>
 
@@ -12,23 +12,25 @@
                 </a>
             </p>
             
-            <hr class="w-10 border-2 block my-10" />
+            <hr class="w-8 md:w-10 border-1 md:border-2 block my-5 md:my-10" />
             
-            <p class="text-3xl w-3/4">{{ entry.content }}</p>
+            <p class="text-xl md:text-2xl lg:text-3xl">{{ entry.content }}</p>
+
+            {% if refresh is defined and refresh == true %}
+                <a href="/" class="text-sm rounded p-2 border mt-8 inline-block hover:border-dashed">Give me another</a>
+            {% endif %}
 
         </div>
 
         {% set image = entry.image[0] %}
-        <figure class="w-1/4 flex-grow-0">
+        <figure class="w-1/4 flex-grow-0 order-first">
             <img src="{{ image.getUrl() }}" alt="{{ image.title }}" class="w-full" />
         </figure>
 
-        <div class="">
-            <div class="bg-white w-8 text-center inline-block p-1 text-black rounded-xl">
-                <span class="inline-block">{{ craft.upvote.upvote(entry.id) }}</span>
-                <span class="inline-block">{{ craft.upvote.tally(entry.id) }}</span>
-                <span class="inline-block">{{ craft.upvote.downvote(entry.id) }}</span>
-            </div>
+        <div class="flex flex-row md:flex-col w-auto md:w-8 gap-2 md:gap-0 shrink-0 items-center py-1 px-2 md:py-0 bg-white text-black rounded-xl">
+            <span class="inline-block">{{ craft.upvote.upvote(entry.id) }}</span>
+            <span class="inline-block">{{ craft.upvote.tally(entry.id) }}</span>
+            <span class="inline-block">{{ craft.upvote.downvote(entry.id) }}</span>
         </div>
 
     </article>
