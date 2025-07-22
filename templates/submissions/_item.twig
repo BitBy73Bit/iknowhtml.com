@@ -1,38 +1,40 @@
-<div class="@container h-dvh pt-10 px-4">
+<main class="flex-grow content-center">
+    <div class="@container pt-10 px-4">
 
-    <article class="flex flex-col md:flex-row gap-10 items-start md:items-center justify-center md:justify-between h-full">
+        <article class="flex flex-col md:flex-row gap-10 items-start md:items-center justify-center md:justify-between h-full">
 
-        <div class="md:order-first w-full">
+            <div class="md:order-first w-full">
 
-            <h1 class="font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl">I know H.T.M.L</h1>
+                <h1 class="font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl">I know H.T.M.L</h1>
 
-            <p class="pt-6 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-                <a href="{{ entry.url }}" class="hover:border-b-2 border-dashed pb-1" style="border-color: {{ textColour }}">
-                    &#123;{{ entry.title }}&#125;
-                </a>
-            </p>
-            
-            <hr class="w-8 md:w-10 border-1 md:border-2 block my-5 md:my-10" />
-            
-            <p class="text-xl md:text-2xl lg:text-3xl">{{ entry.content }}</p>
+                <p class="pt-6 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                    <a href="{{ entry.url }}" class="hover:border-b-2 border-dashed pb-1" style="border-color: {{ textColour }}">
+                        &#123;{{ entry.title }}&#125;
+                    </a>
+                </p>
+                
+                <hr class="w-8 md:w-10 border-1 md:border-2 block my-5 md:my-10" />
+                
+                <p class="text-xl md:text-2xl lg:text-3xl">{{ entry.content }}</p>
 
-            {% if refresh is defined and refresh == true %}
-                <a href="/" class="text-sm rounded p-2 border mt-8 inline-block hover:border-dashed">Give me another</a>
-            {% endif %}
+                {% if refresh is defined and refresh == true %}
+                    <a href="/" class="text-sm rounded p-2 border mt-8 inline-block hover:border-dashed">Give me another</a>
+                {% endif %}
 
-        </div>
+            </div>
 
-        {% set image = entry.image[0] %}
-        <figure class="w-1/4 flex-grow-0 order-first">
-            <img src="{{ image.getUrl() }}" alt="{{ image.title }}" class="w-full" />
-        </figure>
+            {% set image = entry.image[0] %}
+            <figure class="w-1/4 flex-grow-0 order-first">
+                <img src="{{ image.getUrl() }}" alt="{{ image.title }}" class="w-full" />
+            </figure>
 
-        <div class="flex flex-row md:flex-col w-auto md:w-8 gap-2 md:gap-0 shrink-0 items-center py-1 px-2 md:py-0 bg-white text-black rounded-xl">
-            <span class="inline-block">{{ craft.upvote.upvote(entry.id) }}</span>
-            <span class="inline-block">{{ craft.upvote.tally(entry.id) }}</span>
-            <span class="inline-block">{{ craft.upvote.downvote(entry.id) }}</span>
-        </div>
+            <div class="flex flex-row md:flex-col w-auto md:w-8 gap-2 md:gap-0 shrink-0 items-center py-1 px-2 md:py-0 bg-white text-black rounded-xl">
+                <span class="inline-block">{{ craft.upvote.upvote(entry.id) }}</span>
+                <span class="inline-block">{{ craft.upvote.tally(entry.id) }}</span>
+                <span class="inline-block">{{ craft.upvote.downvote(entry.id) }}</span>
+            </div>
 
-    </article>
+        </article>
 
-</div>
+    </div>
+</main>
