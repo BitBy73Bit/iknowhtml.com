@@ -1,8 +1,13 @@
-dateModified: 1753188457
+dateModified: 1753202642
 email:
-  fromEmail: mike@bitbytebit.co.uk
+  fromEmail: hello@iknowhtml.com
   fromName: 'I Know H.T.M.L'
-  transportType: craft\mail\transportadapters\Sendmail
+  replyToEmail: null
+  template: null
+  transportSettings:
+    messageStream: ''
+    token: $POSTMARK_API_KEY
+  transportType: craftcms\postmark\Adapter
 fs:
   uploads:
     hasUrls: true
@@ -16,16 +21,48 @@ meta:
     5b8dc8a4-2ed7-4e21-8893-9aab2b603850: 'Contributor email' # Contributor email
     37f07c62-371d-489f-84be-d2566168b572: Image # Image
     67bf5823-d7ee-4e54-bf55-7fc4f9d3de30: 'I Know H.T.M.L' # I Know H.T.M.L
+    75c95b27-bd1f-4108-b7c7-2aa0c6e395c6: Simple # Simple
     1180ca24-3298-4cf1-b341-f355e8805a5d: 'Background colour' # Background colour
     6559cda3-32a6-484e-8d7a-05bc34a11a4d: Cards # Cards
     021872fb-5e2c-4c7d-a616-afc7d970e1aa: 'Text colour' # Text colour
     71007f13-844b-4655-8e38-e4e8d746a168: Submissions # Submissions
+    b143a797-1b3a-49ef-98aa-4bb92df09ef8: 'New guest submission' # New guest submission
     b557aefa-5deb-4a32-8a7b-3283b87e49ef: 'I Know H.T.M.L' # I Know H.T.M.L
     c04aff30-42c4-40f2-b4d2-eb7ffd05d428: Contributor # Contributor
+    ca35f24f-3b84-451c-8fad-e00ccad35c45: Basic # Basic
     d20193d0-40d4-400c-bce2-93f5b8d757d0: Content # Content
     f8ad44d3-2823-4bea-a767-b86a578768cd: 'Contributor link' # Contributor link
     f69f3858-35a2-4f2d-9b0b-cf05d49ae26d: Submissions # Submissions
 plugins:
+  _submissions-checker:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  craft-hcaptcha:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.2.0
+    settings:
+      secretKey: $HCAPTCHA_SECRET_KEY
+      siteKey: $HCAPTCHA_SITE_KEY
+      size: ''
+      theme: ''
+      validateContactForm: true
+      validateUsersRegistration: false
+  emails:
+    edition: standard
+    enabled: true
+    licenseKey: 9AOSS8DF8YM9Z6NDO5FH7KDT
+    schemaVersion: 3.0.0
+    settings:
+      compressLogs: true
+      mailchimpApiKey: ''
+      mailchimpCacheDuration: 60
+      menuItemName: ''
   guest-entries:
     edition: standard
     enabled: true
@@ -54,6 +91,14 @@ plugins:
                 -
                   - authorUid
                   - aaf7893a-a223-4622-bdaf-440d9db165ff
+  postmark:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
+  triggers:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
   upvote:
     edition: standard
     enabled: true

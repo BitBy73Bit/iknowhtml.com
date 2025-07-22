@@ -2,9 +2,15 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
+    "bitby73bit/craft-submissions-checker": "dev-main",
+    "c10d/craft-hcaptcha": "3.0.1",
+    "craftcms/ckeditor": "4.9.0",
     "craftcms/cms": "^5.0.0",
     "craftcms/guest-entries": "4.0.1",
+    "craftcms/postmark": "3.1.0",
     "doublesecretagency/craft-upvote": "3.1.0",
+    "ryssbowh/craft-emails": "3.0.1",
+    "ryssbowh/craft-triggers": "3.0.1",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -32,6 +38,10 @@
       "type": "composer",
       "url": "https://composer.craftcms.com",
       "canonical": false
+    },
+    {
+      "type": "path",
+      "url": "plugins/submissions-checker"
     }
   ]
 }

@@ -74,6 +74,13 @@
                 </div>
             </fieldset>
 
+            <div class="mt-4">
+                {{ craft.hcaptcha.render() }}
+            </div>
+            <div class="text-red-600 mt-1">
+                {{ entry ? _self.errorList(entry.getErrors('hcaptcha')) }}
+            </div>
+
             <button type="submit" class="border p-2 rounded cursor-pointer hover:bg-black hover:text-white mt-4">Submit</button>
         </form>
     

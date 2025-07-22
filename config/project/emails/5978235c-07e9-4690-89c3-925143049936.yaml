@@ -1,0 +1,13 @@
+bcc: ''
+cc: ''
+ckeConfig: ca35f24f-3b84-451c-8fad-e00ccad35c45 # Basic
+from: ''
+fromName: ''
+heading: 'When someone forgets their password:'
+instructions: ''
+key: forgot_password
+plain: false
+replyTo: ''
+saveLogs: true
+system: true
+template: emails/template

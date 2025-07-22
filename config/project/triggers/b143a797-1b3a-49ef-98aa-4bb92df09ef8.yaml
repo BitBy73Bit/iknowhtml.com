@@ -1,0 +1,56 @@
+actions:
+  -
+    active: true
+    data:
+      email: 6cb3b24d-8b99-45aa-b014-44740630a883
+      users:
+        - '1'
+    handle: send-email
+    order: 0
+    uid: 3df47a7d-1868-4b06-a0d8-0b6cb9c4f10b
+active: true
+conditions:
+  -
+    active: true
+    data:
+      statuses:
+        - disabled
+    handle: entry-status
+    operator: and
+    order: 0
+    uid: accb7be2-894a-4169-8065-fe2bec6ab0a2
+  -
+    active: true
+    data:
+      sections:
+        - 71007f13-844b-4655-8e38-e4e8d746a168 # Submissions
+    handle: entry-section
+    operator: and
+    order: 1
+    uid: e02d6c3d-d01c-45e8-8035-f8bd0d711ae5
+  -
+    active: true
+    data:
+      isNew: true
+    handle: is-new
+    operator: and
+    order: 2
+    uid: 51b7658f-9617-465c-ab67-8d9cf414c1d5
+  -
+    active: true
+    data:
+      isPrimary: true
+    handle: is-primary
+    operator: and
+    order: 3
+    uid: 7c88d265-e6d4-43eb-9b16-5b771fffa231
+  -
+    active: true
+    data:
+      isRevision: false
+    handle: revision
+    operator: and
+    order: 4
+    uid: 77c7cf1d-5aeb-4d38-ad62-31d6c949990b
+handle: entry-saved
+name: 'New guest submission'
