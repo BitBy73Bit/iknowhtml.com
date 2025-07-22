@@ -1,0 +1,36 @@
+<div class="@container h-dvh pt-10 px-4" style="background-color: {{ entry.backgroundColour }}; color: {{ entry.textColour }}">
+
+    <article class="flex gap-10 items-center justify-between h-full">
+
+        <div class="">
+
+            <h1 class="font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl">I know H.T.M.L</h1>
+
+            <p class="pt-6 text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+                <a href="{{ entry.url }}" class="hover:border-b-2 border-dashed pb-1" style="border-color: {{ textColour }}">
+                    &#123;{{ entry.title }}&#125;
+                </a>
+            </p>
+            
+            <hr class="w-10 border-2 block my-10" />
+            
+            <p class="text-3xl w-3/4">{{ entry.content }}</p>
+
+        </div>
+
+        {% set image = entry.image[0] %}
+        <figure class="w-1/4 flex-grow-0">
+            <img src="{{ image.getUrl() }}" alt="{{ image.title }}" class="w-full" />
+        </figure>
+
+        <div class="">
+            <div class="bg-white w-8 text-center inline-block p-1 text-black rounded-xl">
+                <span class="inline-block">{{ craft.upvote.upvote(entry.id) }}</span>
+                <span class="inline-block">{{ craft.upvote.tally(entry.id) }}</span>
+                <span class="inline-block">{{ craft.upvote.downvote(entry.id) }}</span>
+            </div>
+        </div>
+
+    </article>
+
+</div>

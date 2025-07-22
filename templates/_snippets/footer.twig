@@ -1,0 +1,21 @@
+<footer class="absolute bottom-0 py-2 px-4 w-full flex gap-4 text-xs" style="color: {{ textColour }}">
+    
+    <p>A stupid thing by <a href="https://bitbytebit.co.uk" target="_blank" class="border-b border-white" style="border-color: {{ textColour }}">@bitby73bit</a></p>
+    
+    {% if entry is defined and entry.contributor %}
+    <p>Submission by
+    
+        {% if entry.contributorUrl %}
+            <a href="{{ entry.contributorUrl }}" target="_blank" class="border-b border-white" style="border-color: {{ textColour }}">
+        {% endif %}
+
+        {{ entry.contributor }}
+
+        {% if entry.contributorUrl %}
+            </a>
+        {% endif %}
+
+    </p>
+    {% endif %}
+
+</footer>

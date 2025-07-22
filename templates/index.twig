@@ -1,2 +1,13 @@
-{% set rand = craft.entries().section('cards').orderBy('RAND()').one() %}
-{% redirect rand.url %}
+{% set title = "I know H.T.M.L" %}
+
+{# Grab a random card item to display on the homepage #}
+{% set entry = craft.entries().section('submissions').orderBy('RAND()').one() %}
+{% set textColour = entry.textColour %}
+
+{% extends '_layout' %}
+
+{% block body %}
+
+    {% include 'submissions/_item' %}
+
+{% endblock %}

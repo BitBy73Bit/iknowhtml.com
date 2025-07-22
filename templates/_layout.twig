@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="{{ craft.app.language }}">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{ title }}</title>
     <meta charset="utf-8" />
-    <title>{{ entry.title }}</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="referrer" content="origin-when-cross-origin" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body style="background-color: {{ entry.backgroundColour }}; color: {{ entry.textColour }}">
+<body class="antialiased font-mono">
 
-<h1 class="text-5xl font-mono">I know H.T.M.L</h1>
-<p class="font-mono text-lg">&#123;{{ entry.title }}&#125;</p>
+    {% include '_snippets/header' %}
+
+    {% block body %}{% endblock %}
+
+    {% include '_snippets/footer' %}
 
 </body>
 </html>
