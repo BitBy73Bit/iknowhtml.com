@@ -1,0 +1,83 @@
+{% set title = "Submissions - I know H.T.M.L" %}
+{% set textColour = "#000000" %}
+
+{% extends '_layout' %}
+
+{% block body %}
+<main class="flex-grow">
+
+    <article class="pt-10 px-4 w-full md:w-3/4 lg:w-2/3">
+
+        <h1 class="text-3xl font-bold mb-4">Submissions</h1>
+
+        {# Macro to help output errors: #}
+        {% macro errorList(errors) %}
+            {% if errors %}
+                {{ ul(errors, { class: 'errors' }) }}
+            {% endif %}
+        {% endmacro %}
+
+        {# Default value for the `entry` variable: #}
+        {% set entry = entry ?? null %}
+
+        <form method="post" action="" accept-charset="UTF-8" class="w-full md:w-2/3">
+            
+            {# Hidden inputs required for the form to work: #}
+            {{ csrfInput() }}
+            {{ actionInput('guest-entries/save') }}
+
+            {# Custom redirect URI: #}
+            {{ redirectInput('submit/success') }}
+
+            {# Section for new entries: #}
+            {{ hiddenInput('sectionHandle', 'submissions') }}
+
+            {# Entry properties: #}
+            <fieldset>
+                <legend class="text-xl mb-2 font-bold">Your submission</legend>
+                <label for="title" class="font-medium inline-block w-full">I Know H.T.M.L</label>
+                {{ input('text', 'title', entry ? entry.title, { id: 'title', class:'border rounded p-1 mt-1 inline-block w-full', placeholder: 'How to meet ladies'}) }}
+                <div class="text-red-600 mt-1">
+                    {{ entry ? _self.errorList(entry.getErrors('title')) }}
+                </div>
+
+                <label for="content" class="font-medium mt-3 inline-block w-full">Wordplay tag line <span class="italic">(optional)</span></label>
+                {{ tag('textarea', {
+                    text: entry ? entry.content,
+                    id: 'content',
+                    name: 'fields[content]',
+                    class: 'border rounded p-1 mt-1 inline-block w-full'
+                }) }}
+                <div class="text-red-600 mt-1">
+                    {{ entry ? _self.errorList(entry.getErrors('content')) }}
+                </div>
+            </fieldset>
+
+            <fieldset class="mt-4">
+                <legend class="text-xl mb-2 font-bold">Your details</legend>
+                <label for="contributor" class="font-medium inline-block w-full">Your name - for credit <span class="italic">(optional)</span></label>
+                {{ input('text', 'fields[contributor]', entry ? entry.contributor, { id: 'contributor', class:'border rounded p-1 mt-1 inline-block w-full', placeholder: 'Erlich Bachman'}) }}
+                <div class="text-red-600 mt-1">
+                    {{ entry ? _self.errorList(entry.getErrors('contributor')) }}
+                </div>
+
+                <label for="contributorUrl" class="font-medium mt-3 inline-block w-full">Social / website - for credit <span class="italic">(optional)</span></label>
+                {{ input('text', 'fields[contributorUrl]', entry ? entry.contributorUrl, { id: 'contributorUrl', class:'border rounded p-1 mt-1 inline-block w-full', placeholder: 'hackerhostel.com'}) }}
+                <div class="text-red-600 mt-1">
+                    {{ entry ? _self.errorList(entry.getErrors('contributorUrl')) }}
+                </div>
+
+                <label for="contributorEmail" class="font-medium mt-3 inline-block w-full">Email - to be notified <span class="italic">(optional)</span></label>
+                {{ input('text', 'fields[contributorEmail]', entry ? entry.contributorEmail, { id: 'contributorEmail', class:'border rounded p-1 mt-1 inline-block w-full', placeholder: 'erlich@hackerhostel.com'}) }}
+                <div class="text-red-600 mt-1">
+                    {{ entry ? _self.errorList(entry.getErrors('contributorEmail')) }}
+                </div>
+            </fieldset>
+
+            <button type="submit" class="border p-2 rounded cursor-pointer hover:bg-black hover:text-white mt-4">Submit</button>
+        </form>
+    
+    </article>
+
+</main>
+{% endblock %}

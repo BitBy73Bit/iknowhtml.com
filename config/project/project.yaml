@@ -1,4 +1,4 @@
-dateModified: 1753173823
+dateModified: 1753188457
 email:
   fromEmail: mike@bitbytebit.co.uk
   fromName: 'I Know H.T.M.L'
@@ -26,6 +26,34 @@ meta:
     f8ad44d3-2823-4bea-a767-b86a578768cd: 'Contributor link' # Contributor link
     f69f3858-35a2-4f2d-9b0b-cf05d49ae26d: Submissions # Submissions
 plugins:
+  guest-entries:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
+    settings:
+      enableCsrfProtection: '1'
+      entryVariable: entry
+      sections:
+        __assoc__:
+          -
+            - 71007f13-844b-4655-8e38-e4e8d746a168 # Submissions
+            -
+              __assoc__:
+                -
+                  - sectionUid
+                  - 71007f13-844b-4655-8e38-e4e8d746a168 # Submissions
+                -
+                  - allowGuestSubmissions
+                  - '1'
+                -
+                  - enabledByDefault
+                  - ''
+                -
+                  - runValidation
+                  - ''
+                -
+                  - authorUid
+                  - aaf7893a-a223-4622-bdaf-440d9db165ff
   upvote:
     edition: standard
     enabled: true
