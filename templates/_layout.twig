@@ -6,9 +6,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="referrer" content="origin-when-cross-origin" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    {{ craft.vite.script('/src/main.js', false) }}
+
     <script>
     var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(["setDomains", ["*.iknowhtml.com"]]);
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
@@ -20,9 +23,20 @@
         g.async=true; g.src='https://cdn.matomo.cloud/bitbytebit.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
     })();
     </script>
-<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://bitbytebit.matomo.cloud/matomo.php?idsite=7&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+    <noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="https://bitbytebit.matomo.cloud/matomo.php?idsite=7&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+    {% if entry is defined %}
+    <style>
+        html, body {
+            background-color: {{ entry.backgroundColour }}; 
+            color: {{ entry.textColour }};
+        }
+        * {
+            border-color: {{ textColour }};
+        }
+    </style>
+    {% endif %}
 </head>
-<body class="antialiased font-mono flex flex-col min-h-svh" {% if entry is defined %}style="background-color: {{ entry.backgroundColour }}; color: {{ entry.textColour }}; border-color: {{ textColour }};"{% endif %}>
+<body class="antialiased font-mono flex flex-col min-h-svh">
 
     {% include '_snippets/header' %}
 

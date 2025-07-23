@@ -8,7 +8,9 @@
     "craftcms/cms": "^5.0.0",
     "craftcms/guest-entries": "4.0.1",
     "craftcms/postmark": "3.1.0",
+    "craftcms/stripe": "1.6.0",
     "doublesecretagency/craft-upvote": "3.1.0",
+    "nystudio107/craft-vite": "5.0.1",
     "ryssbowh/craft-emails": "3.0.1",
     "ryssbowh/craft-triggers": "3.0.1",
     "vlucas/phpdotenv": "^5.4.0"

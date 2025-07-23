@@ -1,4 +1,4 @@
-dateModified: 1753202642
+dateModified: 1753283295
 email:
   fromEmail: hello@iknowhtml.com
   fromName: 'I Know H.T.M.L'
@@ -95,6 +95,21 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.1
+  stripe:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.2.0
+    settings:
+      createUserIfMissing: false
+      defaultCancelUrl: null
+      defaultSuccessUrl: null
+      productTemplate: ''
+      productUriFormat: ''
+      publishableKey: $STRIPE_PUBLISHABLE
+      secretKey: $STRIPE_SECRET
+      syncChangedUserEmailsToStripe: true
+      webhookId: ''
+      webhookSigningSecret: ''
   triggers:
     edition: standard
     enabled: true
@@ -112,12 +127,17 @@ plugins:
       keepVoteLog: false
       preload: true
       requireLogin: false
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true
   name: 'I Know H.T.M.L'
+  retryDuration: null
   schemaVersion: 5.8.0.3
-  timeZone: America/Los_Angeles
+  timeZone: UTC
 users:
   allowPublicRegistration: false
   defaultGroup: null
