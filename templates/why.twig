@@ -1,7 +1,14 @@
-{% set title = "About - I know H.T.M.L" %}
-{% set textColour = "#000000" %}
-
 {% extends '_layout' %}
+
+{% block seo %}
+  {% set seo = craft.seo.custom(
+    "About",
+    "I ended up creating some Erlich (Silicon Valley HBO) inspired stickers for my first time at Defcon. Why? Because the world needs a bit more fun."
+  ) %}
+  {{ parent() }}
+{% endblock %}
+
+{% set textColour = "#000000" %}
 
 {% block body %}
 <main class="flex-grow">

@@ -1,7 +1,14 @@
-{% set title = "Submissions - I know H.T.M.L" %}
-{% set textColour = "#000000" %}
-
 {% extends '_layout' %}
+
+{% block seo %}
+  {% set seo = craft.seo.custom(
+    "Submission successful",
+    "Thanks for your submission. I'll review it and get it added."
+  ) %}
+  {{ parent() }}
+{% endblock %}
+
+{% set textColour = "#000000" %}
 
 {% block body %}
 <main class="flex-grow">

@@ -1,7 +1,14 @@
-{% set title = product.title ~ " - I Know H.T.M.L" %}
-{% set textColour = "#000000" %}
-
 {% extends '_layout' %}
+
+{% block seo %}
+  {% set seo = craft.seo.custom(
+    "Buy 'I Know H.T.M.L' stickers",
+    "A pack of 10 stickers, consisting of one sticker of each of the original 'I Know H.T.M.L' designs. Stickers are finished as gloss with permanent adhesive, measuring 70mm x 40mm."
+  ) %}
+  {{ parent() }}
+{% endblock %}
+
+{% set textColour = "#000000" %}
 
 {% block body %}
 <main class="flex-grow">

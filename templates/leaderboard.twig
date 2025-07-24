@@ -1,10 +1,17 @@
-{% set title = "Leaderboard - I know H.T.M.L" %}
+{% extends '_layout' %}
+
+{% block seo %}
+  {% set seo = craft.seo.custom(
+    "Leaderboard",
+    "I ended up creating some Erlich (Silicon Valley HBO) inspired stickers for my first time at Defcon. Why? Because the world needs a bit more fun."
+  ) %}
+  {{ parent() }}
+{% endblock %}
+
 {% set textColour = "#000000" %}
 
 {% set submissions = craft.entries.section('submissions') %}
 {% do craft.upvote.sort(submissions) %}
-
-{% extends '_layout' %}
 
 {% block body %}
 <main class="flex-grow">
