@@ -10,6 +10,7 @@
     "craftcms/postmark": "3.1.0",
     "craftcms/stripe": "1.6.0",
     "doublesecretagency/craft-upvote": "3.1.0",
+    "ether/seo": "5.0.0",
     "nystudio107/craft-vite": "5.0.1",
     "ryssbowh/craft-emails": "3.0.1",
     "ryssbowh/craft-triggers": "3.0.1",
