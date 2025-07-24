@@ -19,23 +19,9 @@
         
         {{ product.description }}
 
-        <ul class="mt-8">
-            {% for price in product.prices %}
-                <li>
-                <span class="font-bold">{{ price.data|unitAmount }}</span> - 
-                {{ tag('a', {
-                    text: "Buy now",
-                    class: "border-black border p-2 rounded hover:bg-black hover:text-white",
-                    href: price.getCheckoutUrl(
-                    currentUser ?? false,
-                    'shop/thank-you?session={CHECKOUT_SESSION_ID}',
-                    product.url,
-                    {}
-                    ),
-                }) }}
-                </li>
-            {% endfor %}
-        </ul>
+        <div class="mt-4">
+            {{ product.paymentLinkEmbed | raw }}
+        </div>
 
         <hr class="my-8 block">
 

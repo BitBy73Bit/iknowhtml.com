@@ -1,4 +1,4 @@
-dateModified: 1753372800
+dateModified: 1753373794
 email:
   fromEmail: hello@iknowhtml.com
   fromName: 'I Know H.T.M.L'
@@ -21,6 +21,7 @@ meta:
     5b8dc8a4-2ed7-4e21-8893-9aab2b603850: 'Contributor email' # Contributor email
     6ba376e5-616a-43ea-aea1-d6509a324de4: 'SEO Metadata' # SEO Metadata
     37f07c62-371d-489f-84be-d2566168b572: Image # Image
+    48cba4cc-32ce-415d-86d0-9110e803a4d8: 'Payment link embed' # Payment link embed
     67bf5823-d7ee-4e54-bf55-7fc4f9d3de30: 'I Know H.T.M.L' # I Know H.T.M.L
     75c95b27-bd1f-4108-b7c7-2aa0c6e395c6: Simple # Simple
     1180ca24-3298-4cf1-b341-f355e8805a5d: 'Background colour' # Background colour
