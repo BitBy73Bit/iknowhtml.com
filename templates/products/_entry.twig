@@ -1,0 +1,46 @@
+{% set title = product.title ~ " - I Know H.T.M.L" %}
+{% set textColour = "#000000" %}
+
+{% extends '_layout' %}
+
+{% block body %}
+<main class="flex-grow">
+
+    <article class="pt-10 px-4 w-full md:w-3/4 lg:w-2/3">
+
+        <h1 class="text-3xl font-bold mb-4">{{ product.title }}</h1>
+        
+        {{ product.description }}
+
+        <ul class="mt-8">
+            {% for price in product.prices %}
+                <li>
+                <span class="font-bold">{{ price.data|unitAmount }}</span> - 
+                {{ tag('a', {
+                    text: "Buy now",
+                    class: "border-black border p-2 rounded hover:bg-black hover:text-white",
+                    href: price.getCheckoutUrl(
+                    currentUser ?? false,
+                    'shop/thank-you?session={CHECKOUT_SESSION_ID}',
+                    product.url,
+                    {}
+                    ),
+                }) }}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <hr class="my-8 block">
+
+        {% if product.gallery | length > 0 %}
+        <figure class="w-full">
+            {% for item in product.gallery %}
+                <img src="{{ item.getUrl() }}" alt="{{ item.title }}" class="mb-4" />
+            {% endfor %}
+        </figure>
+        {% endif %}
+    
+    </article>
+
+</main>
+{% endblock %}

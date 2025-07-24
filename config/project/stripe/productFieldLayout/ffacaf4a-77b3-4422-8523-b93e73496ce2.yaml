@@ -1,0 +1,61 @@
+cardThumbAlignment: end
+cardView:
+  - stripeId
+tabs:
+  -
+    elementCondition: null
+    elements:
+      -
+        dateAdded: '2025-07-23T15:44:47+00:00'
+        editCondition: null
+        elementCondition: null
+        fieldUid: 8156bca5-51c7-4b78-89d3-6ab2b1370ed5 # Description
+        handle: null
+        includeInCards: false
+        instructions: null
+        label: null
+        providesThumbs: false
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 8a1edde1-f1f0-43f9-b2e1-fbc812c52181
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        dateAdded: '2025-07-23T16:35:02+00:00'
+        editCondition: null
+        elementCondition: null
+        fieldUid: 44183a63-2451-4bf6-86f1-4b5e29989830 # Gallery
+        handle: null
+        includeInCards: false
+        instructions: null
+        label: null
+        providesThumbs: false
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        uid: 25642eb7-3d6e-4e93-976b-e34c9d34f987
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        attribute: prices
+        dateAdded: '2025-07-23T15:07:09+00:00'
+        elementCondition: null
+        id: null
+        includeInCards: false
+        instructions: null
+        label: null
+        orientation: null
+        providesThumbs: false
+        requirable: false
+        tip: null
+        type: craft\stripe\fieldlayoutelements\PricesField
+        uid: 37668d30-a5f4-40c1-94f0-fdcb5595c5cf
+        userCondition: null
+        warning: null
+        width: 100
+    name: Content
+    uid: 8138ebe0-f618-4953-b95d-03b409e94d4d
+    userCondition: null

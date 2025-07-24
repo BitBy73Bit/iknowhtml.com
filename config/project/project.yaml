@@ -1,4 +1,4 @@
-dateModified: 1753283295
+dateModified: 1753368714
 email:
   fromEmail: hello@iknowhtml.com
   fromName: 'I Know H.T.M.L'
@@ -24,7 +24,9 @@ meta:
     75c95b27-bd1f-4108-b7c7-2aa0c6e395c6: Simple # Simple
     1180ca24-3298-4cf1-b341-f355e8805a5d: 'Background colour' # Background colour
     6559cda3-32a6-484e-8d7a-05bc34a11a4d: Cards # Cards
+    8156bca5-51c7-4b78-89d3-6ab2b1370ed5: Description # Description
     021872fb-5e2c-4c7d-a616-afc7d970e1aa: 'Text colour' # Text colour
+    44183a63-2451-4bf6-86f1-4b5e29989830: Gallery # Gallery
     71007f13-844b-4655-8e38-e4e8d746a168: Submissions # Submissions
     b143a797-1b3a-49ef-98aa-4bb92df09ef8: 'New guest submission' # New guest submission
     b557aefa-5deb-4a32-8a7b-3283b87e49ef: 'I Know H.T.M.L' # I Know H.T.M.L
@@ -95,6 +97,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.1
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
   stripe:
     edition: standard
     enabled: true
@@ -103,8 +109,8 @@ plugins:
       createUserIfMissing: false
       defaultCancelUrl: null
       defaultSuccessUrl: null
-      productTemplate: ''
-      productUriFormat: ''
+      productTemplate: products/_entry.twig
+      productUriFormat: 'products/{slug}'
       publishableKey: $STRIPE_PUBLISHABLE
       secretKey: $STRIPE_SECRET
       syncChangedUserEmailsToStripe: true
