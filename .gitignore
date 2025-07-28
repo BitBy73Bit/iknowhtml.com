@@ -5,3 +5,4 @@
 .DS_Store
 config/license.key
 node_modules
+deployment.md
